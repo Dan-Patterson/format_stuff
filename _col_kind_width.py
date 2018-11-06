@@ -38,6 +38,6 @@ def _col_kind_width(a, deci=0):
     # ---- call to _ckw_ ----
     dtn = a.dtype.names
     if dtn is None:  # ---- uniform dtype
-        return [_ckw_(a, deci)]
+        return [_ckw_(name="", deci=deci)]
     else:  # ---- mixed dtype with names
-        return [_ckw_(a[name], name, deci) for name in dtn]
+        return [_ckw_(a[name], name, deci=deci) for name in dtn]
