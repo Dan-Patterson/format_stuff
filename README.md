@@ -220,6 +220,26 @@ prn_rec(b, rows_m=3)  # ---- Koala-like isn't it!!!
  005         20    19 A      C_   Hall     ...
 ```
 
+
+Can't wait?  How about **'prn_q'**. 
+
+This!
+```
+prn_q(a0, 3)
+OID_   ID     Norm    Rank1   Text01 Text02 Xs         Ys         
+     1      0   10.83    1393 Ccccc  None    309208.00  5032765.00
+     2      1    9.99     650 Bbbbb  eeeee   303006.00  5031740.00
+     3      2   10.25    1055 None   None    309797.00  5032586.00
+```
+Or this!
+```
+a0[:3] 
+array([(1, 0, 10.83, 1393, 'Ccccc', 'None', 309208., 5032765.),
+       (2, 1,  9.99,  650, 'Bbbbb', 'eeeee', 303006., 5031740.),
+       (3, 2, 10.25, 1055, 'None', 'None', 309797., 5032586.)],
+      dtype=[('OID_', '<i4'), ('ID', '<i4'), ('Norm', '<f8'), ('Rank1', '<i4'), ('Text01', '<U5'), ('Text02', '<U5'), ('Xs', '<f8'), ('Ys', '<f8')])
+```
+
 **Options abound.**
 
 **The code will follow**
