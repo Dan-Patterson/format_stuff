@@ -1,8 +1,9 @@
-# format_stuff
+# format_stuff #
 Format options for python and numpy.  I often want a quick print/view of 'stuff' and have found the current offerings not to my needs.  This repository adds to the confusion and options.
 
 Case in point...  remember that... quit the 'but!  what about'
 
+**ugh**
 ```
 ugh = np.random.randint(3*7*11, size=(3, 7, 11))
 
@@ -33,9 +34,30 @@ array([[[ 51, 142, 162, 166,  35,  26, 113,  96, 143, 113,  97],
         [170,   4, 223,   3,  93, 122, 142, 136, 217, 105, 159]]])
 ```
 
+**(1) Reshaping the array**
+
 As the array is called ... ugh ... but not bad, at least for small arrays you can see all the numbers.  But the vertical-ness of the presentation gets pretty cumbersome as the dimensions increase or subarray size gets bigger.
 
-You can use 'context managers' (I think that is what it is called) and if you are working with `numpy`, you can mess with edge items and the like, but keep your main settings intact for most functions and functionality.
+You can always reshape the array to scrunch up the rows a tad
+
+```
+ugh2 = np.swapaxes(ugh, 0, 1).reshape(shp[1], shp[0]*shp[2])
+
+with np.printoptions(edgeitems=15, linewidth=160):
+    print(ugh2)
+    
+[[ 51 142 162 166  35  26 113  96 143 113  97  97  65  50  88 ... 214  11  11  57  36 205  18 100 169  60 111  36 186  42 159]
+ [ 55 134  60 106  75 180 201 101 146  25 167  19  79 161 182 ...  54  49 163 138 199 178 227  89 177 211  87  51 157  69 170]
+ [ 21 227 146 169 217  47 114 138 100 102  90  63 154  74 227 ... 227  37  87 225   5   4  50 116 125 129 185 219   0 117  29]
+ [120 193 214 194 144 114 214 221 108 134  72 124 148 212  77 ... 214  32  54 167  98  23  31   8  95  51  30 138 150  79 123]
+ [206 141  86  20  80 223 140 108  18 111 161  18  73  61  76 ... 139  30 171 183   4 177  18 126 121  80  98  41 189  46 223]
+ [159  82  34 133 115  37 176  48 216 183  72  48 151  27 122 ...  49 152 184  20 196 201  38  22 150 123  95 210  51 100  25]
+ [205  17  79  62  72 193  30  81 121 210 211  29  75  29   8 ...  51 170  23 168 170   4 223   3  93 122 142 136 217 105 159]]
+ ```
+ The problem then is you usually run out of print width and the differences in the blocks become less obvious.
+
+**(2) Context managers**
+You can use 'context managers' (I think that is what it is called) and if you are working with `numpy`, you can mess with edge items and the like, but keep your main settings intact for most functions and functionality. I did sneak one in, in the previous example you might have noticed.
 
 ```
 with np.printoptions(edgeitems=3, linewidth=100, precision=2,
@@ -71,6 +93,8 @@ The vertical and horizontal scrunchies give you a quick view and who doesn't lov
   
 Often I would rather see things printed more row-wise-ish.
 
+**(3) Removing extra lines**
+
 You can scrunch stuff up!  One of my favourites is `deline`, which does just that, with a tad more about the array as a peace offering.
 
  ```
@@ -103,7 +127,9 @@ Array... shape: (3, 7, 11) ndim: 3
   . [170   4 223   3  93 122 142 136 217 105 159]]
   
   ```
-  
+
+**(4) Variants involving the above**
+
 I have variants if I am working with arrays of 3, 4, 5 + dimensions.
 For example, the following options allow me to plunk an array row-wise with either clipping, truncation or edge representations.
 Not one of them covers all cases, but at least there is an arsenal to choose from.
@@ -179,7 +205,10 @@ Array... ndim 4  shape(3, 5, 9, 11)
 |=> (2 5 9 11)
 ```
 
-Structured/recarrays??
+**(5) Structured/recarrays?? things get ugh-lier**
+
+Sometimes they look fine, sometimes they are a mangled mess if the columns contain a wide range of character sizes.  This one doesn't look too bad because the sizes are relatively the same.
+
 ```
 b   # ---- just that messy wrap around but informative presentation
 array([( 1,  0, 'B', 'B_', 'Hall', 11), ( 2,  1, 'A', 'A_', 'Hall', 24),
@@ -221,7 +250,7 @@ prn_rec(b, rows_m=3)  # ---- Koala-like isn't it!!!
 ```
 
 
-Can't wait?  How about **'prn_q'**. 
+**(6) Can't wait?  How about 'prn_q'**. 
 
 This!
 ```
@@ -239,6 +268,7 @@ array([(1, 0, 10.83, 1393, 'Ccccc', 'None', 309208., 5032765.),
        (3, 2, 10.25, 1055, 'None', 'None', 309797., 5032586.)],
       dtype=[('OID_', '<i4'), ('ID', '<i4'), ('Norm', '<f8'), ('Rank1', '<i4'), ('Text01', '<U5'), ('Text02', '<U5'), ('Xs', '<f8'), ('Ys', '<f8')])
 ```
+Quick and fast and suitable for small arrays.
 
 **Options abound.**
 
