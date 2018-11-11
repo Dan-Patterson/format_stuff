@@ -138,7 +138,7 @@ Not one of them covers all cases, but at least there is an arsenal to choose fro
 
 **---- option 1 ----** keep the first 'bit' as full as possible, then truncate
 
-[prn_nd.py ... row-wise options 1](https://github.com/Dan-Patterson/format_stuff/blob/master/prn_nd.py)
+[prn_nd.py ... row-wise options 1](https://github.com/Dan-Patterson/format_stuff/blob/master/scripts/prn_nd.py)
 
  ```
  # ---- ndim = 3, row-wise
@@ -157,7 +157,7 @@ Array...
 ```
 **---- option 2 ----** truncate each 'bit' a bit to show more within the width limit
 
-[prn_.py ... row-wise option 2](https://github.com/Dan-Patterson/format_stuff/blob/master/prn_.py)
+[prn_.py ... row-wise option 2](https://github.com/Dan-Patterson/format_stuff/blob/master/scripts/prn_.py)
 ```
 prn_(ugh, deci=2, width=100, title="Array", prefix=". . ", prn=True)
 
@@ -172,7 +172,7 @@ Array... ndim: 3  shape: (3, 7, 11)
 ```
 **---- option 3 ----** bring on the ellipses!
 
-[prn_3d4d.py ... row-wise option 3](https://github.com/Dan-Patterson/format_stuff/blob/master/prn_3d4d.py)
+[prn_3d4d.py ... row-wise option 3](https://github.com/Dan-Patterson/format_stuff/blob/master/scripts/prn_3d4d.py)
 ```
 prn_3d4d(ugh, deci=0, edgeitems=3, width=100, prn=True)
 
@@ -282,7 +282,7 @@ Quick and fast and suitable for small arrays.
 
 **Options abound.**
 
-See [reshape_options...](https://github.com/Dan-Patterson/format_stuff/blob/master/reshape_options.py) for the code used to generate the array shapes contained in the image below.
+See [reshape_options...](https://github.com/Dan-Patterson/format_stuff/blob/master/scripts/reshape_options.py) for the code used to generate the array shapes contained in the image below.
 
 <a href="url"><img src="https://github.com/Dan-Patterson/format_stuff/blob/master/array_shapes.png" ></a>
 
