@@ -135,7 +135,8 @@ Array... shape: (3, 7, 11) ndim: 3
 I have variants if I am working with arrays of 3, 4, 5 + dimensions.
 For example, the following options allow me to plunk an array row-wise with either clipping, truncation or edge representations.
 Not one of them covers all cases, but at least there is an arsenal to choose from.
-  
+
+[prn_nd.py ... row-wise options 1](https://github.com/Dan-Patterson/format_stuff/blob/master/prn_nd.py)
  ```
  # ---- ndim = 3, row-wise
  # ---- option 1 ---- keep the first 'bit' as full as possible, then truncate
