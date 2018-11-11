@@ -166,9 +166,11 @@ Array... ndim: 3  shape: (3, 7, 11)
 . .  206 141  86  20  80 223 140 108..   18 111 161  18  73  61  76 170..   48 187 139  30 171 183   4 1...
 . .  159  82  34 133 115  37 176  48..  216 183  72  48 151  27 122  27..  230   7  49 152 184  20 196 2...
 . .  205  17  79  62  72 193  30  81..  121 210 211  29  75  29   8  72..  210 171  51 170  23 168 170  ...
-
+```
 # ---- option 3 ---- bring on the ellipses!
 
+[prn_3d4d.py ... row-wise option 3](https://github.com/Dan-Patterson/format_stuff/blob/master/prn_3d4d.py)
+```
 prn_3d4d(ugh, deci=0, edgeitems=3, width=100, prn=True)
 
 Array... ndim 4  shape(1, 3, 7, 11)
