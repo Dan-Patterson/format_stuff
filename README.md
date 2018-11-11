@@ -272,5 +272,8 @@ Quick and fast and suitable for small arrays.
 
 **Options abound.**
 
+
+<a href="url"><img src="https://github.com/Dan-Patterson/format_stuff/array_shapes.png" align="center" width="400" ></a>
+
 **The code will follow**
 
