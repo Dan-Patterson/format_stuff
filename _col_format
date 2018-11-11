@@ -1,5 +1,5 @@
 
-
+```
 # (1i) _col_format .... code section
 #
 def _col_format(c, c_name="c00", deci=0):
@@ -51,3 +51,4 @@ def _col_format(c, c_name="c00", deci=0):
             c_format = "!s:<{}".format(c_width)
         form_width.append([c_format, c_width])
     return form_width
+```
