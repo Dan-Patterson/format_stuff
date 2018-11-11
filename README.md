@@ -136,10 +136,13 @@ I have variants if I am working with arrays of 3, 4, 5 + dimensions.
 For example, the following options allow me to plunk an array row-wise with either clipping, truncation or edge representations.
 Not one of them covers all cases, but at least there is an arsenal to choose from.
 
+**---- option 1 ----** keep the first 'bit' as full as possible, then truncate
+
 [prn_nd.py ... row-wise options 1](https://github.com/Dan-Patterson/format_stuff/blob/master/prn_nd.py)
+
  ```
  # ---- ndim = 3, row-wise
- # ---- option 1 ---- keep the first 'bit' as full as possible, then truncate
+ 
  prn_nd(ugh, deci=0, width=100, title="Array", prefix="  .", prn=True)
 
 Array...
@@ -152,7 +155,7 @@ Array...
   .  159   82   34  133  115   37  176   48  216  183   72     48  151   27  122   27  230    7   49  1....
   .  205   17   79   62   72  193   30   81  121  210  211     29   75   29    8   72  210  171   51  1....
 ```
-# ---- option 2 ---- truncate each 'bit' a bit to show more within the width limit
+**---- option 2 ----** truncate each 'bit' a bit to show more within the width limit
 
 [prn_.py ... row-wise option 2](https://github.com/Dan-Patterson/format_stuff/blob/master/prn_.py)
 ```
@@ -167,7 +170,7 @@ Array... ndim: 3  shape: (3, 7, 11)
 . .  159  82  34 133 115  37 176  48..  216 183  72  48 151  27 122  27..  230   7  49 152 184  20 196 2...
 . .  205  17  79  62  72 193  30  81..  121 210 211  29  75  29   8  72..  210 171  51 170  23 168 170  ...
 ```
-# ---- option 3 ---- bring on the ellipses!
+**---- option 3 ----** bring on the ellipses!
 
 [prn_3d4d.py ... row-wise option 3](https://github.com/Dan-Patterson/format_stuff/blob/master/prn_3d4d.py)
 ```
