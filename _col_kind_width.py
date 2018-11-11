@@ -1,6 +1,4 @@
-
-**column kind and width **
-
+```
 # ----------------------------------------------------------------------
 # (1h) _c_kind_width .... code section
 #
@@ -41,3 +39,4 @@ def _col_kind_width(a, deci=0):
         return [_ckw_(name="", deci=deci)]
     else:  # ---- mixed dtype with names
         return [_ckw_(a[name], name, deci=deci) for name in dtn]
+```
