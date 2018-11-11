@@ -97,7 +97,7 @@ Often I would rather see things printed more row-wise-ish.
 
 You can scrunch stuff up!  One of my favourites is `deline`, which does just that, with a tad more about the array as a peace offering.
 
-[deline.py ... removing extra lines](https://github.com/Dan-Patterson/format_stuff/blob/master/deline.py)
+[deline.py ... removing extra lines](https://github.com/Dan-Patterson/format_stuff/blob/master/scripts/deline.py)
 
  ```
 deline(ugh)
