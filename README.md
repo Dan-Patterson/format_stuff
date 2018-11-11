@@ -272,7 +272,7 @@ Quick and fast and suitable for small arrays.
 
 **Options abound.**
 
-
+See <a href="url">https://github.com/Dan-Patterson/format_stuff/blob/master/reshape_options.py</a> for the code used to generate the array shapes contained in the image below.
 <a href="url"><img src="https://github.com/Dan-Patterson/format_stuff/blob/master/array_shapes.png" ></a>
 
 **The code will follow**
