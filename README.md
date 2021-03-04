@@ -286,5 +286,5 @@ See [reshape_options...](https://github.com/Dan-Patterson/format_stuff/blob/mast
 
 <a href="url"><img src="https://github.com/Dan-Patterson/format_stuff/blob/master/array_shapes.png" ></a>
 
-**The code will follow**
+**The code is in the scripts folder.**
 
